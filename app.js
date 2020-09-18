@@ -10,7 +10,7 @@ const app = express();
 //connect to mongodb
 const dbURI = 'mongodb+srv://netninja:test1234@cluster0.mnoqs.mongodb.net/node-crash-course?retryWrites=true&w=majority';
 mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true})
-  .then((result) => app.listen(process.env.PORT || 5000))
+  .then((result) => app.listen(process.env.PORT || 3000))
   .catch((err) => console.log(err));
 
 // register view engine
