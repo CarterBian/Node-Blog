@@ -25,10 +25,6 @@ app.get('/', (req, res) => {
   res.redirect('/blogs');
 });
 
-app.get('/about', (req, res) => {
-  res.render('about', { title: 'About' });
-});
-
 // blog routes
 app.use('/blogs', blogRoutes);
 
