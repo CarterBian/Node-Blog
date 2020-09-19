@@ -4,15 +4,22 @@
 <body>
   <%- include("../partials/nav.ejs") %>
 
-  <div class="create-blog content">
+  <div class="create-blog content row">
     <form action="/blogs" method="POST">
-      <label for="title">Blog title:</label>
-      <input type="text" id="title" name="title" required>
-      <label for="snippet">Blog snippet:</label>
-      <input type="text" id="snippet" name="snippet" required>
-      <label for="body">Blog body:</label>
-      <textarea id="body" name="body" required></textarea>
-      <button>Submit</button>
+
+      <label class="black-text">Blog title:</label>
+      <input id="title" type="text" class="validate" required>
+      
+      <label class="black-text">Blog snippet:</label>
+      <input id="snippet" type="text" class="validate" required>
+      
+      <label class="black-text">Blog body:</label>
+      <textarea id="body" class="materialize-textarea " required></textarea>
+
+      <div class="row">
+        <div class="col s12 offset-s12"></div>
+      </div>
+      <button class="btn blue accent-1 black-text">Submit</button>
     </form>
   </div>
 

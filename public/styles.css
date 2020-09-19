@@ -3,6 +3,7 @@ html { font-family: 'Inter', sans-serif; }
 @supports (font-variation-settings: normal) {
   html { font-family: 'Inter var', sans-serif; }
 }
+
 body{
   max-width: 1200px;
   margin: 20px auto;
@@ -19,11 +20,19 @@ p, h1, h2, h3, a, ul{
 
 /* nav */
 nav{
+  all: revert;
+}
+nav ul a{
+  color: #222;
+  font-size: 1.3rem;
+}
+
+nav{
   display: flex;
   justify-content: space-between;
   margin-bottom: 60px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 2px solid rgb(114, 180, 255);
   text-transform: uppercase;
 }
 nav ul{
@@ -39,7 +48,6 @@ nav h1{
   font-size: 3em;
 }
 nav p, nav a{
-  color: #777;
   font-weight: 300;
 }
 h2{
@@ -63,6 +71,12 @@ h3{
 .blogs a:hover h3{
   color: rgb(114, 180, 255);
 }
+a h3{
+  font-size: 2.8rem;
+}
+a p{
+  font-size: 1.3rem;
+}
 
 /* details styles */
 .details{
@@ -84,6 +98,14 @@ h3{
 }
 
 /* create styles */
+label{
+  font-size: 1.1em;
+}
+input[type=text]:focus {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+/*
 .create-blog form{
   max-width: 400px;
   margin: 0 auto;
@@ -110,4 +132,4 @@ textarea{
   border: 0;
   font-size: 1.2em;
   cursor: pointer;
-}
+}*/
