@@ -102,35 +102,3 @@ a p{
 label{
   font-size: 1.1em;
 }
-input[type=text]:focus {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000;
-}
-/*
-.create-blog form{
-  max-width: 400px;
-  margin: 0 auto;
-}
-.create-blog input,
-.create-blog textarea{
-  display: block;
-  width: 100%;
-  margin: 10px 0;
-  padding: 8px;
-}
-.create-blog label{
-  display: block;
-  margin-top: 24px;
-}
-textarea{
-  height: 120px;
-}
-.create-blog button{
-  margin-top: 20px;
-  background: crimson;
-  color: white;
-  padding: 6px;
-  border: 0;
-  font-size: 1.2em;
-  cursor: pointer;
-}*/
