@@ -45,13 +45,14 @@ nav li{
   margin-left: 20px;
 }
 nav h1{
-  font-size: 3em;
+  font-size: 3.2em;
 }
 nav p, nav a{
   font-weight: 300;
 }
 h2{
   margin-bottom: 40px;
+  font-size: 3.46rem;;
 }
 h3{
   text-transform: capitalize;
@@ -72,7 +73,7 @@ h3{
   color: rgb(114, 180, 255);
 }
 a h3{
-  font-size: 2.8rem;
+  font-size: 2.7rem;
 }
 a p{
   font-size: 1.3rem;
