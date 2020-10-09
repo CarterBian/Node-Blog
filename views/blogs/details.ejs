@@ -9,7 +9,9 @@
     <div class="content">
       <p><%= blog.body %></p>
     </div>
-    <a class="delete" data-doc="<%= blog._id %>"><i class="material-icons">delete_forever</i></a>
+    <% if(user && blog.email == user.email){ %>
+      <a class="delete" data-doc="<%= blog._id %>"><i class="material-icons">delete_forever</i></a>
+    <% } %>
   </div>
 
 

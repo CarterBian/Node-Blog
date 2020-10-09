@@ -1,4 +1,7 @@
 const Blog = require('../models/blog');
+const jwt = require('jsonwebtoken');
+const User = require("../models/User");
+const { default: validator } = require('validator');
 // blog_index, blog_details, blog_create_get, blog_create_post, blog_delete
 
 const blog_index = (req, res) => {
@@ -26,7 +29,12 @@ const blog_create_get = (req, res) => {
     res.render('blogs/create', { title: 'Create a new blog' });
 }
 
-const blog_create_post = (req, res) => {
+const blog_create_post = async (req, res) => {
+    const token = req.cookies.jwt;
+    await jwt.verify(token, 'secret', async (err, decodedToken) =>{
+        let user = await User.findById(decodedToken.id);
+        req.body["email"] = await user.email;
+    });
     const blog = new Blog(req.body);
 
     blog.save()
