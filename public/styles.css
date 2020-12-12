@@ -17,13 +17,16 @@ p, h1, h2, h3, a, ul{
   text-decoration: none;
   color: #222;
 }
+h1, h2{
+  color: rgb(39, 116, 174);
+}
 
 /* nav */
 nav{
   all: revert;
 }
 nav ul a{
-  color: #222;
+  color: rgb(39, 116, 174);;
   font-size: 1.3rem;
 }
 
@@ -32,7 +35,7 @@ nav{
   justify-content: space-between;
   margin-bottom: 60px;
   padding-bottom: 10px;
-  border-bottom: 2px solid rgb(114, 180, 255);
+  border-bottom: 2px solid rgb(255, 209, 0);
   text-transform: uppercase;
 }
 nav ul{
@@ -67,10 +70,10 @@ h3{
   display: block;
   margin: 40px 0;
   padding-left: 30px;
-  border-left: 6px solid rgb(114, 180, 255);
+  border-left: 6px solid rgb(255, 209, 0);
 }
 .blogs a:hover h3{
-  color: rgb(114, 180, 255);
+  color: rgb(39, 116, 174);
 }
 a h3{
   font-size: 2.7rem;
