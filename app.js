@@ -11,8 +11,8 @@ require('dotenv').config();
 const app = express();
 
 //connect to mongodb
-// const dbURI = 'mongodb+srv://carter:test1234@cluster0.mnoqs.mongodb.net/node-crash-course?retryWrites=true&w=majority';
-const dbURI = process.env.db_URI;
+const dbURI = 'mongodb+srv://carter:test1234@cluster0.mnoqs.mongodb.net/node-crash-course?retryWrites=true&w=majority';
+// const dbURI = process.env.db_URI;
 mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true})
   .then((result) => app.listen(process.env.PORT || 3000))
   .catch((err) => console.log(err));
