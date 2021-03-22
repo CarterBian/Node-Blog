@@ -5,12 +5,14 @@ const cookieParser = require('cookie-parser');
 const blogRoutes = require('./routes/blogRoutes');
 const authRoutes = require('./routes/authRoutes');
 const {checkUser} = require('./middleware/authMiddleware');
+require('dotenv').config();
 
 // express app
 const app = express();
 
 //connect to mongodb
-const dbURI = 'mongodb+srv://carter:test1234@cluster0.mnoqs.mongodb.net/node-crash-course?retryWrites=true&w=majority';
+// const dbURI = 'mongodb+srv://carter:test1234@cluster0.mnoqs.mongodb.net/node-crash-course?retryWrites=true&w=majority';
+const dbURI = process.env.db_URI;
 mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true})
   .then((result) => app.listen(process.env.PORT || 3000))
   .catch((err) => console.log(err));
